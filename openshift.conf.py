@@ -46,8 +46,8 @@ SENTRY_KEY = use_keys['SECRET_KEY']
 #It will attempt to guess it if you don't, but proxies may interfere with this.
 SENTRY_URL_PREFIX = 'https://' + os.environ['OPENSHIFT_GEAR_DNS']
 
-SENTRY_WEB_HOST = os.environ['OPENSHIFT_INTERNAL_IP']
-SENTRY_WEB_PORT = os.environ['OPENSHIFT_INTERNAL_PORT']
+SENTRY_WEB_HOST = os.environ['OPENSHIFT_PYTHON_IP']
+SENTRY_WEB_PORT = os.environ['OPENSHIFT_PYTHON_PORT']
 SENTRY_WEB_OPTIONS = {
     'workers': 3,  # the number of gunicorn workers
     'secure_scheme_headers': {'X-FORWARDED-PROTO': 'https'},
